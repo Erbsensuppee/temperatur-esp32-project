@@ -25,3 +25,47 @@ I try to create a project with ESP-IDF and I will only use VIM ad my IDF.
     ```
     idf.py monitor
     ```
+    
+## Folder Structure
+ESP32_Project/
+│
+├── components/         # Contains all custom components
+│   ├── bme280/
+│   │   ├── bme280.c
+│   │   ├── bme280.h
+│   │   └── CMakeLists.txt
+│   │
+│   ├── pt1000/
+│   │   ├── pt1000.c
+│   │   ├── pt1000.h
+│   │   └── CMakeLists.txt
+│   │
+│   ├── ph_sensor/
+│   │   ├── ph_sensor.c
+│   │   ├── ph_sensor.h
+│   │   └── CMakeLists.txt
+│   │
+│   ├── tds_sensor/
+│   │   ├── tds_sensor.c
+│   │   ├── tds_sensor.h
+│   │   └── CMakeLists.txt
+│   │
+│   └── network/
+│       ├── wifi.c
+│       ├── wifi.h
+│       ├── access_point.c
+│       ├── access_point.h
+│       └── CMakeLists.txt
+│
+├── main/                # Main application code
+│   ├── main.c           # Entry point of the application
+│   ├── ethernet_thread.c
+│   ├── ethernet_thread.h
+│   ├── control_thread.c
+│   ├── control_thread.h
+│   └── CMakeLists.txt
+│
+├── sdkconfig            # SDK configuration file
+│
+└── CMakeLists.txt       # Main CMake file for the project
+
