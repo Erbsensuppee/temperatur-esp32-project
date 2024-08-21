@@ -28,7 +28,7 @@ I try to create a project with ESP-IDF and I will only use VIM ad my IDF.
     
 ## ESP32 Project Folder Structure
 ```
-ESP32_Project/
+wMeter/
 │
 ├── components/ # Contains all custom components
 │ ├── bme280/
@@ -58,6 +58,10 @@ ESP32_Project/
 │ ├── access_point.h
 │ └── CMakeLists.txt
 │
+├── credentials/ # Directory for sensitive data (ignored by Git)
+│ └── wifi_credentials.h
+│ └── api_keys.h
+│
 ├── main/ # Main application code
 │ ├── main.c # Entry point of the application
 │ ├── ethernet_thread.c
@@ -67,6 +71,8 @@ ESP32_Project/
 │ └── CMakeLists.txt
 │
 ├── sdkconfig # SDK configuration file
+│
+├── .gitignore # Git ignore file
 │
 └── CMakeLists.txt # Main CMake file for the project
 ```
